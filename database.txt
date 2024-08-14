@@ -1,0 +1,17 @@
+(CREATING A NEW DATABASE)
+create database myDb;
+
+(FOR USING THE DATABASE)
+use myDb;
+
+(FOR DROPPING A DATABASE)
+drop database myDb;
+
+(FOR MAKING THE DATABASE AS A READ-ONLY FORMAT)
+(IF THIS IS DONE , WE CANNOT CHANGE ANYTHING IN THE DATABASE)
+alter database myDb read only=1;
+
+(FOR REMOVING THE DATABASE FROM READ-ONLY FORMAT)
+alter database myDb read only=0;
+
+
