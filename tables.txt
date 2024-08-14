@@ -1,0 +1,52 @@
+(CREATING A TABLE)
+create table emp();
+
+(CREATING A TABLE WITH COLUMNS)
+create table emp(
+emp_id int,
+first_name varchar(30),
+last_name varchar (30),
+hourly_pay decimal (5,2),
+DOJ date,
+);
+
+int -> integers
+varchar -> variable character length
+char -> fixed character length
+decimal -> (max digit,precision)
+date -> yyyy/mm/dd format
+
+(TO DISPLAY THE TABLE)
+select * from emp;
+
+(TO RENAME THE TABLE NAME)
+rename table emp to employee;
+
+(TO DROP A TABLE)
+drop table emp;
+
+(TO ALTER THE TABLE BY ADDING A NEW COLUMN)
+alter table emp 
+add phone_no varchar (15);
+
+(TO RENAME A COLUMN IN THE TABLE)
+alter table emp 
+rename column phone_no to email;
+
+(TO CHANGE THE TYPE OF THE COLUMN)
+alter table emp 
+modify column email varchar(50);
+
+(TO CHANGE THE POSITION OF THE COLUMN)
+alter table emp 
+modify email varchar(50) 
+after last_name;
+
+(TO MOVE THE POSITION OF THE COLUMN TO FIRST PLACE {ALTERNATIVE})
+alter table emp 
+modify email varchar(50) 
+first;
+
+(TO DROP A COLUMN)
+alter table emp
+drop column email;
