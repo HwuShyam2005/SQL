@@ -1,0 +1,9 @@
+(FOR SETTING THE AUTOCOMMIT TO OFF)
+set autocommit = off;
+
+(FOR SETTING A SAVE KIND-OF CHECKPOINT) 
+commit;
+
+(TO GET BACK TO THE LAST SAVED COMMIT)
+rollback;
+
