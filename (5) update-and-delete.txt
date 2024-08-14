@@ -1,0 +1,41 @@
+(USING THIS CREATED TABLE)
+create table emp(
+emp_id int,
+first_name varchar(30),
+last_name varchar (30),
+hourly_pay decimal (5,2),
+DOJ date,
+);
+
+(INSERTING INTO ROWS)
+(SHOULD BE TYPED INDIVIDUALLY FOR EACH ROW)
+(METHOD 1)
+insert into emp values(111,"ABC","CBA",25.50,"2023-02-01");
+insert into emp values(222,"DEF","FED",20.50,"2023-04-21");
+insert into emp values(333,"GHI","IHG",19.50,"2023-04-01");
+insert into emp values(444,"JKL","LKJ",26.50,"2023-06-01");
+
+(TO UPDATE A SINGLE COLUMN IN A TABLE)
+update emp 
+set hourly_pay = 10.25
+where emp_id = 33;
+
+(TO UPDATE MULTIPLE COLUMNS IN A TABLE)
+update emp 
+set hourly_pay = 10.25,
+    hire_date = "2023-12-11"
+where emp_id = 33;
+
+(TO UPDATE NULL VALUE)
+update emp 
+set hourly_pay = null,
+    hire_date = "2023-12-11"
+where emp_id = 333;
+
+(TO DELETE A ROW FROM TABLE)
+delete from emp
+where emp_id = 111;
+
+
+
+ 
