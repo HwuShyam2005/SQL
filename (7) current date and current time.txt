@@ -1,0 +1,20 @@
+create table test(
+  my_date date,
+  my_time time,
+  my_datetime datetime,
+);
+
+(FOR GETTING THE TIME)
+insert into test values(current_date(), current_time(), now());
+
+here,
+current_date() is used for receiving the date in yyyy-mm-dd format
+current_time() is used for receiving the time in hh-mm-ss format
+now() returns the date and time together
+
+(CHANGING THE CURRENT TIME AND NOW TO NULL AND CURRENT DATE TO THE NEXT DAY)
+insert into test values(current_date() + 1, NULL, NULL);
+
+(CHANGING THE CURRENT TIME AND NOW TO NULL AND CURRENT DATE TO THE PREVIOUS DAY)
+insert into test values(current_date() - 1, NULL, NULL);
+
