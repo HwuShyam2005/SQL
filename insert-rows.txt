@@ -1,0 +1,36 @@
+(USING THIS CREATED TABLE)
+create table emp(
+emp_id int,
+first_name varchar(30),
+last_name varchar (30),
+hourly_pay decimal (5,2),
+DOJ date,
+);
+
+(INSERTING INTO ROWS)
+(SHOULD BE TYPED INDIVIDUALLY FOR EACH ROW)
+(METHOD 1)
+insert into emp values(111,"ABC","CBA",25.50,"2023-02-01");
+insert into emp values(222,"DEF","FED",20.50,"2023-04-21");
+insert into emp values(333,"GHI","IHG",19.50,"2023-04-01");
+insert into emp values(444,"JKL","LKJ",26.50,"2023-06-01");
+
+(ONE INSERT STATEMENT AND ALL ROW VALUES SEPERATED WITH COMMA)
+(METHOD 2)
+insert into emp values
+(111,"ABC","CBA",25.50,"2023-02-01"),
+(222,"DEF","FED",20.50,"2023-04-21"),
+(333,"GHI","IHG",19.50,"2023-04-01"),
+(444,"JKL","LKJ",26.50,"2023-06-01");
+
+(COUNT ERROR OCCURS WHEN REQUIRED VALUES ARENT ADDED)
+(HERE, THE LAST NAME AND DOJ IS NOT GIVEN)
+insert into emp values
+(111,"ABC",25.50,);
+
+(THIS CAN BE FIXED BY PROVIDING SPECIFIC COLUMN NAMES)
+insert into emp(emp_id, first_name, hourly_pay) values
+(111,"ABC",25.50,);
+
+
+
