@@ -1,0 +1,58 @@
+(USING THE CREATED TABLE)
+create table emp(
+emp_id int,
+first_name varchar(30),
+last_name varchar (30),
+hourly_pay decimal (5,2),
+DOJ date,
+);
+
+insert into emp values(111,"ABC","CBA",25.50,"2023-02-01");
+insert into emp values(222,"DEF","FED",20.50,"2023-04-21");
+insert into emp values(333,"GHI","IHG",19.50,"2023-04-01");
+insert into emp values(444,"JKL","LKJ",26.50,"2023-06-01");
+
+(DISPLAYING THE TABLE)
+select * from emp;
+
+(SELECTING THE FIRST NAME AND LAST NAME)
+select first_name, last_name 
+from emp;
+
+(SELECTING THE LASTNAME AND FIRST NAME)
+select last_name, first_name 
+from emp;
+
+(SELECTING BASED ON THEIR EMPLOYEE ID)
+select *
+from emp 
+where emp_id = 222;
+
+(SELECTING BASED ON THEIR HOURLY PAY GREATER THAN OR EQUAL TO 25.50)
+select *
+from emp
+where hourly_pay >=20;
+
+(SELECTING BASED ON THEIR DOJ DATE LESSER THAN OR EQUAL TO "2023-04-21")
+select *
+from emp
+where DOJ <= "2023-04-21";
+
+(SELECTING BASED ON THEIR EMPLOYEE ID WHICH IS NOT EQUAL TO 333)
+select *
+from emp
+where emp_id != 333;
+
+(SELECTING BASED ON THEIR HIRE DATE WHICH IS NULL)
+select *
+from emp 
+where hire_date is null;
+
+(SELECTING BASED ON THEIR HIRE DATE WHICH IS NOT NULL)
+select *
+from emp 
+where hire_date is not null;
+
+
+
+
